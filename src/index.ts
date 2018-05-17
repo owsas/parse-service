@@ -13,12 +13,12 @@ export class ParseService {
     return query.first(options);
   }
 
-  static save(obj:Parse.Object, options: Parse.Object.SaveOptions):
+  static save(obj:Parse.Object, options?: Parse.Object.SaveOptions):
   Parse.Promise<Parse.Object> {
     return obj.save(null, options);
   }
 
-  static destroy(obj:Parse.Object, options: Parse.Object.DestroyOptions):
+  static destroy(obj:Parse.Object, options?: Parse.Object.DestroyOptions):
   Parse.Promise<Parse.Object> {
     return obj.destroy(options);
   }

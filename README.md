@@ -104,6 +104,37 @@ class ParseService {
 }
 ```
 
+## Usage
+
+```ts
+async function test() {
+  const query = new Parse.Query('Game');
+  
+  // using find and query options
+  const results = await ParseService.find(query, { useMasterKey: true });
+
+  // using first and query options
+  const first = await ParseService.first(query, { useMasterKey: true });
+
+  // without query options
+  const first2 = await ParseService.first(query);
+
+  // saving with save options
+  first.set('points', 100);
+  await ParseService.save(first, { useMasterKey: true, sessionToken: '...' });
+
+  // without save options
+  first.set('points', 100);
+  await ParseService.save(first);
+
+  // destroying with options
+  await ParseService.destroy(first, { sessionToken: '...' });
+
+  // destroying without options
+  await ParseService.destroy(first);
+}
+```
+
 ## Dev Mode
 Clone this repo, and start adding your code in the `index.ts` file.  
 When you are done, write the tests in the `index.test.ts` file. For testing, this repo works with [Jest](https://facebook.github.io/jest/).

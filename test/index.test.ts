@@ -8,7 +8,7 @@ describe('#find', () => {
     const mock = jest.spyOn(obj, 'find');
     mock.mockImplementation(async (params, options) => obj);
 
-    const options = { useMasterKey: true };
+    const options: Parse.Query.FindOptions = { useMasterKey: true };
 
     const result = await ParseService.find(obj, options);
 
@@ -24,7 +24,7 @@ describe('#first', () => {
     const mock = jest.spyOn(obj, 'first');
     mock.mockImplementation(async (params, options) => obj);
 
-    const options = { useMasterKey: true };
+    const options: Parse.Object.SaveOptions = { useMasterKey: true };
 
     const result = await ParseService.first(obj, options);
 
