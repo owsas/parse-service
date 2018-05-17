@@ -1,5 +1,5 @@
 {
-  "name": "parse-service",
+  "name": "@owsas/parse-service",
   "version": "1.0.0",
   "description": "Easily find, save or delete Parse Objects",
   "main": "out/index.js",
