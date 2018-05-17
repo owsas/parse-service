@@ -78,8 +78,33 @@ yarn add @owsas/parse-service
 
 Please, make sure you have also installed `parse` in your project, because this package has no dependencies
 
-## Usage
+## API
 
+```ts
+class ParseService {
+  static find(
+    query: Parse.Query, 
+    options?: Parse.Query.FindOptions
+  ): Parse.Promise<Parse.Object[]>;
+
+  static first(
+    query: Parse.Query, 
+    options?: Parse.Query.FirstOptions,
+  ): Parse.Promise<Parse.Object>;
+
+  static save(
+    obj:Parse.Object, 
+    options: Parse.Object.SaveOptions
+  ): Parse.Promise<Parse.Object>;
+
+  static destroy(
+    obj:Parse.Object, 
+    options: Parse.Object.DestroyOptions
+  ): Parse.Promise<Parse.Object>;
+}
+```
+
+## Usage
 Clone this repo, and start adding your code in the `index.ts` file.  
 When you are done, write the tests in the `index.test.ts` file. For testing, this repo works with [Jest](https://facebook.github.io/jest/).
 
