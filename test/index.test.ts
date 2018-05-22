@@ -1,6 +1,22 @@
 import * as Parse from 'parse/node';
 import { ParseService } from '../src/index';
 
+describe('#fetch', () => {
+  test('should call the fetch method of the object', async () => {
+    const obj = new Parse.Object('Test');
+    
+    const mock = jest.spyOn(obj, 'fetch');
+    mock.mockImplementation(async (params, options) => obj);
+
+    const options: Parse.Object.FetchOptions = { useMasterKey: true };
+
+    const result = await ParseService.fetch(obj, options);
+
+    expect(mock).toHaveBeenCalledWith(options);
+    expect(result).toEqual(obj);
+  });
+});
+
 describe('#find', () => {
   test('should call the find method of the query', async () => {
     const obj = new Parse.Query('Test');

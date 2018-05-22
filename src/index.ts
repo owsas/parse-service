@@ -1,4 +1,9 @@
 export class ParseService {
+  static fetch(obj:Parse.Object, options?: Parse.Object.FetchOptions):
+  Parse.Promise<Parse.Object> {
+    return obj.fetch(options);
+  }
+
   static find(
     query: Parse.Query, 
     options?: Parse.Query.FindOptions,
