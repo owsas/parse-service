@@ -64,6 +64,22 @@ In the same fashion, `ParseService` exposes static functions for:
 * Saving objects (`ParseService.save`)
 * Destroying objects (`ParseService.destroy`)
 
+<!-- TOC -->
+
+- [Parse Service](#parse-service)
+  - [Installation](#installation)
+  - [API](#api)
+  - [Usage](#usage)
+  - [Changelog](#changelog)
+    - [v1.0.2](#v102)
+  - [Dev Mode](#dev-mode)
+  - [Dev Features](#dev-features)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Support us on Patreon](#support-us-on-patreon)
+
+<!-- /TOC -->
+
 
 ## Installation
 
@@ -134,6 +150,11 @@ async function test() {
   await ParseService.destroy(first);
 }
 ```
+
+## Changelog
+
+### v1.0.2
+* Added `fetch` function
 
 ## Dev Mode
 Clone this repo, and start adding your code in the `index.ts` file.  
