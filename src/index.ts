@@ -1,4 +1,11 @@
 export class ParseService {
+  static count(
+    query: Parse.Query, 
+    options?: Parse.Query.CountOptions,
+  ): Parse.Promise<number> {
+    return query.count(options);
+  }
+
   static fetch(obj:Parse.Object, options?: Parse.Object.FetchOptions):
   Parse.Promise<Parse.Object> {
     return obj.fetch(options);

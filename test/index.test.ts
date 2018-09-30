@@ -1,6 +1,22 @@
 import * as Parse from 'parse/node';
 import { ParseService } from '../src/index';
 
+describe('#count', () => {
+  test('should call the count method of the query', async () => {
+    const query = new Parse.Query('Test');
+    
+    const mock = jest.spyOn(query, 'count');
+    mock.mockImplementation(async (params, options) => query);
+
+    const options: Parse.Query.FindOptions = { useMasterKey: true };
+
+    const result = await ParseService.count(query, options);
+
+    expect(mock).toHaveBeenCalledWith(options);
+    expect(result).toEqual(query);
+  });
+});
+
 describe('#fetch', () => {
   test('should call the fetch method of the object', async () => {
     const obj = new Parse.Object('Test');
