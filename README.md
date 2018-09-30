@@ -71,6 +71,7 @@ In the same fashion, `ParseService` exposes static functions for:
   - [API](#api)
   - [Usage](#usage)
   - [Changelog](#changelog)
+    - [v1.0.3](#v103)
     - [v1.0.2](#v102)
   - [Dev Mode](#dev-mode)
   - [Dev Features](#dev-features)
@@ -98,6 +99,11 @@ Please, make sure you have also installed `parse` in your project, because this 
 
 ```ts
 class ParseService {
+  static count(
+    query: Parse.Query, 
+    options?: Parse.Query.CountOptions
+  ): Parse.Promise<number>;
+
   static find(
     query: Parse.Query, 
     options?: Parse.Query.FindOptions
@@ -152,6 +158,9 @@ async function test() {
 ```
 
 ## Changelog
+
+### v1.0.3
+* Added `count` function
 
 ### v1.0.2
 * Added `fetch` function
