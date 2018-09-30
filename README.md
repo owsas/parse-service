@@ -71,6 +71,7 @@ In the same fashion, `ParseService` exposes static functions for:
   - [API](#api)
   - [Usage](#usage)
   - [Changelog](#changelog)
+    - [v1.0.4](#v104)
     - [v1.0.3](#v103)
     - [v1.0.2](#v102)
   - [Dev Mode](#dev-mode)
@@ -158,6 +159,9 @@ async function test() {
 ```
 
 ## Changelog
+
+### v1.0.4
+* Fixed git urls
 
 ### v1.0.3
 * Added `count` function
