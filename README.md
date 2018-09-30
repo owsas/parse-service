@@ -1,5 +1,7 @@
 # Parse Service
 
+![Travis CI](https://travis-ci.org/owsas/parse-service.svg?branch=master)
+
 This module exposes a class with static functions that help you find, save or delete Parse Objects with one call.
 
 The motivation to use this package is because at some point you will need to test your code. Let's make an example with a function that adds two numbers:
