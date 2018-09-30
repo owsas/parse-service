@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owsas/typescript-module-template.git"
+    "url": "git+https://github.com/owsas/parse-service.git"
   },
   "bugs": {
-    "url": "https://github.com/owsas/typescript-module-template/issues"
+    "url": "https://github.com/owsas/parse-service/issues"
   },
-  "homepage": "https://github.com/owsas/typescript-module-template#readme"
+  "homepage": "https://github.com/owsas/parse-service#readme"
 }
