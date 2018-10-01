@@ -97,3 +97,20 @@ describe('#destroy', () => {
   });
 });
 
+describe('#each', () => {
+  test('should call the each method of the object', async () => {
+    const query = new Parse.Query('Test');
+    
+    const mock = jest.spyOn(query, 'each');
+    mock.mockImplementation(async options => query);
+
+    const callback = jest.fn();
+    const options = { useMasterKey: true };
+
+    const result = await ParseService.each(query, callback, options);
+
+    expect(mock).toHaveBeenCalledWith(callback, options);
+    expect(result).toEqual(query);
+  });
+});
+

@@ -34,4 +34,12 @@ export class ParseService {
   Parse.Promise<Parse.Object> {
     return obj.destroy(options);
   }
+
+  static each(
+    query: Parse.Query, 
+    callback: (obj: Parse.Object) => any,
+    options?: Parse.Query.EachOptions,
+  ): Parse.Promise<any> {
+    return query.each(callback, options);
+  }
 }
