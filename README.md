@@ -73,6 +73,7 @@ In the same fashion, `ParseService` exposes static functions for:
   - [API](#api)
   - [Usage](#usage)
   - [Changelog](#changelog)
+    - [v1.0.6](#v106)
     - [v1.0.5](#v105)
     - [v1.0.4](#v104)
     - [v1.0.3](#v103)
@@ -162,6 +163,9 @@ async function test() {
 ```
 
 ## Changelog
+
+### v1.0.6
+* Added `each` function
 
 ### v1.0.5
 * Added travis CI
