@@ -1,3 +1,6 @@
+# REPO MOVED
+Please refer to the new opensource monorepo from Otherwise: https://github.com/owsas/opensource/tree/master/packages/parse-service
+
 # Parse Service
 
 ![Travis CI](https://travis-ci.org/owsas/parse-service.svg?branch=master)
